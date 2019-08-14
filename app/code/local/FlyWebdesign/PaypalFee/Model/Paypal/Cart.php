@@ -18,10 +18,15 @@ class FlyWebdesign_PaypalFee_Model_Paypal_Cart extends Mage_Paypal_Model_Cart
         end($this->_items);
         $lastRegularItemKey = key($this->_items);
 
-
-		// Extra fee - added 21-4-12
-		$chargeType = Mage::getStoreConfig('paypal/account/charge_type');
-       	$chargeValue = Mage::getStoreConfig('paypal/account/charge_value');
+		if(Mage::getStoreConfig('payment/paypal_payment_solutions/charge_type')){
+			// Magento 1.7.0.2 and higher
+			$chargeType = Mage::getStoreConfig('payment/paypal_payment_solutions/charge_type');
+			$chargeValue = Mage::getStoreConfig('payment/paypal_payment_solutions/charge_value');
+		} else {
+			// Extra fee - added 21-4-12
+			$chargeType = Mage::getStoreConfig('paypal/account/charge_type');
+			$chargeValue = Mage::getStoreConfig('paypal/account/charge_value');
+		}
 
         // regular totals
         $shippingDescription = '';

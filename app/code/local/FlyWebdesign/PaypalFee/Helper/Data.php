@@ -17,8 +17,14 @@ class FlyWebdesign_PaypalFee_Helper_Data extends Mage_Core_Helper_Abstract
 		$address = $quote->isVirtual() ? $quote->getBillingAddress() : $quote->getShippingAddress();
 		
 		if (preg_match("/paypal/i", strval($code))) {
-			$chargeType = Mage::getStoreConfig('paypal/account/charge_type');
-        	$chargeValue = Mage::getStoreConfig('paypal/account/charge_value');
+			if(Mage::getStoreConfig('payment/paypal_payment_solutions/charge_type')){
+				// Magento 1.7.0.2 and higher
+				$chargeType = Mage::getStoreConfig('payment/paypal_payment_solutions/charge_type');
+				$chargeValue = Mage::getStoreConfig('payment/paypal_payment_solutions/charge_value');
+			} else {
+				$chargeType = Mage::getStoreConfig('paypal/account/charge_type');
+        		$chargeValue = Mage::getStoreConfig('paypal/account/charge_value');
+			}
 		}
 		else {
 			$chargeType = Mage::getStoreConfig('payment/'.strval($code).'/charge_type');
