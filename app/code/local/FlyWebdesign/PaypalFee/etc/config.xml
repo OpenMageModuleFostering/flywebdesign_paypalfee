@@ -74,8 +74,8 @@
                 <totals>
                     <payment_charge>
                         <class>paymentcharge/sales_quote_address_total_paymentcharge</class>
-                        <after>shipping</after>
-                        <before>tax,grand_total</before>
+                        <after>subtotal,discount,shipping,tax</after>
+                        <before>grand_total</before>
                     </payment_charge>
                  </totals>
              </quote>
