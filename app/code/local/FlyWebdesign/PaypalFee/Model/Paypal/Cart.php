@@ -80,7 +80,7 @@ class FlyWebdesign_PaypalFee_Model_Paypal_Cart extends Mage_Paypal_Model_Cart
             );
         }
         $shippingItemId = $this->_renderTotalLineItemDescriptions(self::TOTAL_SHIPPING, $shippingDescription);
-        if ($this->_isShippingAsItem && (float)$this->_totals[self::TOTAL_SHIPPING]) {
+        if ($this->_isDiscountAsItem && $this->_isShippingAsItem && (float)$this->_totals[self::TOTAL_SHIPPING]) {
             $this->addItem(Mage::helper('paypal')->__('Shipping'), 1, (float)$this->_totals[self::TOTAL_SHIPPING],
                 $shippingItemId
             );

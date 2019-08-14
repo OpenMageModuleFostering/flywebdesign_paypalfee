@@ -6,8 +6,8 @@
     "description": "Add a customer fee to payment methods, like PayPal.",
     "authors": [
     {
-        "name": "Fly Webdesign",
-        "email": "info@flywebdesign.nl"
+        "name": "Fly Webservices",
+        "email": "info@flywebservices.nl"
     }
 ],
     "suggest": {

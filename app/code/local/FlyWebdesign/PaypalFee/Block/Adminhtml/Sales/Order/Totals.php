@@ -6,7 +6,7 @@
  * @category    FlyWebdesign
  * @package     FlyWebdesign_PaypalFee
  */
-class FlyWebdesign_PaypalFee_Block_Adminhtml_Sales_order_Totals extends FlyWebdesign_PaypalFee_Block_Adminhtml_Sales_Totals
+class FlyWebdesign_PaypalFee_Block_Adminhtml_Sales_Order_Totals extends FlyWebdesign_PaypalFee_Block_Adminhtml_Sales_Totals
 {
 	/**
      * Initialize order totals array
