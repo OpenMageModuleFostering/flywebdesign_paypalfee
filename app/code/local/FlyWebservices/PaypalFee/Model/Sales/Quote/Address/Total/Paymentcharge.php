@@ -24,7 +24,7 @@ class FlyWebservices_PaypalFee_Model_Sales_Quote_Address_Total_Paymentcharge ext
         $paymentMethod = $address->getQuote()->getPayment()->getMethod();
 		
 		if(Mage::getStoreConfig('tax/calculation/price_includes_tax')!=1)
-			$tax=$address->getTaxAmount();
+			$tax=$address->getBaseTaxAmount();
 		
         if ($paymentMethod) { 
            	$amount1 = Mage::helper('paymentcharge')->getPaymentCharge($paymentMethod, $address->getQuote());
