@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/flywebdesign_paypalfee",
+    "name": "OpenMageModuleFostering\/flywebdesign_paypalfee",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Add a customer fee to payment methods, like PayPal.",
     "authors": [
-    {
-        "name": "Fly Webservices",
-        "email": "info@flywebservices.nl"
-    }
-],
+        {
+            "name": "Fly Webservices",
+            "email": "info@flywebservices.nl"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
